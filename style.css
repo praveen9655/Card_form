@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Poppins;
+}
+.container{
+    width: 100vw;
+    display: flex;
+}
+.col_1{
+    width: 600px;
+    height: 100vh;
+    background: url(bg-main-desktop.png);
+    color: #fff;
+}
+#card_num{
+    position: absolute;
+    top: 120px;
+    left: 30px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 25px;
+}
+.f_card img{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+.col_1sub{
+    display: flex;
+    position: absolute;
+    top: 170px;
+    left: 30px;
+    width: 340px;
+    justify-content: space-between;
+}
+#card_cvc{
+    position: absolute;
+    top: 108px;
+    color: #222;
+    left: 340px;
+}
+.f_card{
+    width: 390px;
+    height: 214px;
+    border-radius: 12px;
+    position: absolute;
+    top: 90px;
+    left: 100px;
+    background: url(bg-card-front.png), lightgray 50% / cover no-repeat;
+    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.35);
+    transition: all 1s;
+}
+.b_card{
+    width: 390px;
+    height: 214px;
+    position: absolute;
+    top: 360px;
+    left: 150px;
+    border-radius: 12px;
+    background: url(bg-card-back.png), lightgray 50% / cover no-repeat;
+    box-shadow: 0px 0px 40px 20px rgba(0, 0, 0, 0.15);
+    transition: all 1s;
+}
+.col_2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col_2 .detail .comp{
+    display: none;
+
+}
+.compsub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+#conBtn{
+    width: 300px;
+    height: 42px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #220930;
+    color: #fff;
+    margin: 20px;
+}
+.detail{
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main_form{
+    display: block;
+}
+.main_form .cvc{
+     display: flex;
+     justify-content: space-between;
+}
+.main_form p{
+    color: #452356;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 5px;
+    margin-top: 18px;
+}
+.main_form button{
+    width: 300px;
+    height: 42px;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 8px;
+    background-color: #220930;
+    color: #fff;
+    margin-top: 20px;
+}
+.main_form input{
+    width: 284px;
+    height: 30px;
+    padding: 5px;
+    outline: 0;
+    border-radius: 11px;
+    border: 1px solid  #220930;
+    background: rgba(217, 217, 217, 0.00);
+}
+.main_form small{
+    color: red;
+
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+.shake-input {
+    animation: shake 0.6s;
+}
+.main_form .cvc input{
+    width: 100px;
+    height: 30px;
+}
+.main_form .cvc1 input{
+    width: 60px;
+    height: 30px;
+}
+@media (max-width : 1100px) {
+    .container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .col_1{
+        width: 100%;
+        height: 200px;
+        background: url(bg-main-desktop.png);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .col_2{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+    #card_num{
+        position: absolute;
+        top: 80px;
+        left: 30px;
+        font-size: 20px;
+    }
+    .f_card img{
+        position: absolute;
+        width: 40px;
+        top: 20px;
+        left: 30px;
+    }
+    .col_1sub{
+        display: flex;
+        position: absolute;
+        top: 120px;
+        left: 20px;
+        width: 250px;
+        font-size: small;
+        justify-content: space-between;
+    }
+    #card_cvc{
+        position: absolute;
+        top: 65px;
+        color: #222;
+        left: 220px;
+    }
+    .f_card{
+        width: 280px;
+        height: 155px;
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        z-index: 10;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.35);
+        background-size: cover;
+    }
+    .b_card{
+        width: 280px;
+        height: 155px;
+
+        position: absolute;
+        top: 10px;
+        left: 70px;
+        box-shadow: 0px 0px 40px 20px rgba(0, 0, 0, 0.15);
+        background-size: cover;
+    }
+}

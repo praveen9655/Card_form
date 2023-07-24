@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/pimg.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&amp;family=Poppins:wght@200;500&amp;display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="col_1">
+      <div class="f_card">
+        <img src="card-logo.svg" alt="">
+        <p id="card_num">0000 0000 0000 0000</p>
+        <div class="col_1sub">
+          <p id="card_name">XXXXXX XXX</p>
+          <p id="card_ex">  <Span id="card_mm">00</Span>/<Span id="card_yy">00</Span></p>
+        </div>
+      </div>
+      <div class="b_card">
+        <p id="card_cvc">000</p>
+      </div>
+    </div>
+    <div class="col_2">
+        <form id="myForm">
+          <div class="detail">
+            <div class="comp">
+              <div class="compsub">
+                <img src="icon-complete.png" alt="">
+                <b>Thank you!</b>
+                <p> We've added your card details</p>
+                <input type="button" value="Continue" id="conBtn">
+              </div>
+            </div>
+            <div class="main_form">
+              <div class="cardName">
+                <p>CARDHOLDER NAME</p>
+                <input type="text" id="inCard_name" oninput="liveUpinfo()" placeholder="e.g. Dev Praveen" ><br>
+                <small id="wrnName"></small>
+              </div>
+              <p>CARD NUMBER</p>
+              <input type="text" id="inCard_num" oninput="liveUpinfo()"  placeholder="e.g. 1234 5678 9123 0000"><br>
+              <small  id="wrnNum"></small>
+              <div class="cvc">
+                <div class="cvc1">
+                  <p>EXP. DATE (MM/YY)</p>
+                  <input type="text" id="inCard_mm" oninput="liveUpinfo()"  placeholder="MM">
+                  <input type="text" id="inCard_yy" oninput="liveUpinfo()"  placeholder="YY"><br>
+                  <small  id="wrnMm"></small>
+                </div>
+                <div class="cvc2">
+                  <p>CVC</p>
+                  <input type="text" id="inCard_cvc" oninput="liveUpinfo()"  placeholder=" e.g. 123"><br>
+                  <small  id="wrncvc"></small>
+                </div>
+              </div>
+              <button type="submit" onclick="conFirm()">Confirm</button>
+            </div>
+         </div>
+        </form>
+    </div>
+  </div>
+ <script src="script.js"></script>
+</body>
+</html>
+
