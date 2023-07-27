@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,42 +26,50 @@
       </div>
     </div>
     <div class="col_2">
-        <form id="myForm">
-          <div class="detail">
-            <div class="comp">
-              <div class="compsub">
-                <img src="icon-complete.png" alt="">
-                <b>Thank you!</b>
-                <p> We've added your card details</p>
-                <input type="button" value="Continue" id="conBtn">
+      <div class="compsub">
+        <img src="icon-complete.png" alt="">
+        <b>Thank you!</b>
+        <p> We've added your card details</p>
+        <input type="button" value="Continue" id="conBtn">
+      </div>
+      <div class="detail">
+        <form action="" class="main_form" id="form">
+            <div class="input-group ">
+                <label for="username">CARDHOLDER NAME</label>
+                <input type="text" oninput="liveUpinfo()" name="username" id="username" placeholder="e.g. Dev Praveen" autocomplete="username">
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="card_num">CARD NUMBER</label>
+                <input type="text" name="card_num" id="card_nu"  placeholder="e.g. 1234 5678 9123 0000" autocomplete="card_num">
+                <div class="error"></div>
+            </div>
+            <div class="cvc">
+               <div class="cvc1">
+                 <div id="dop">
+                      <div class="input-group dop">
+                          <label for="cardMm">EXP. DATE (MM)</label>
+                          <input type="text" id="cardMm" name="cardMm"  placeholder="MM">
+                          <div class="error" autocomplete="cardMm"></div>
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="cardMm">(YY)</label>
+                    <input type="text" id="cardYy" name="cardYy" placeholder="YY" autocomplete="cardYy">
+                    <div class="error" ></div>
+                  </div>
+               </div>
+              <div class="cvc2">
+                <div class="input-group">
+                  <label for="cardCvc">CVC</label>
+                  <input type="text" name="cardCvc" id="cardCvc"  placeholder=" e.g. 123" autocomplete="cardCvc">
+                  <div class="error"></div>
+                </div>
               </div>
             </div>
-            <div class="main_form">
-              <div class="cardName">
-                <p>CARDHOLDER NAME</p>
-                <input type="text" id="inCard_name" oninput="liveUpinfo()" placeholder="e.g. Dev Praveen" ><br>
-                <small id="wrnName"></small>
-              </div>
-              <p>CARD NUMBER</p>
-              <input type="text" id="inCard_num" oninput="liveUpinfo()"  placeholder="e.g. 1234 5678 9123 0000"><br>
-              <small  id="wrnNum"></small>
-              <div class="cvc">
-                <div class="cvc1">
-                  <p>EXP. DATE (MM/YY)</p>
-                  <input type="text" id="inCard_mm" oninput="liveUpinfo()"  placeholder="MM">
-                  <input type="text" id="inCard_yy" oninput="liveUpinfo()"  placeholder="YY"><br>
-                  <small  id="wrnMm"></small>
-                </div>
-                <div class="cvc2">
-                  <p>CVC</p>
-                  <input type="text" id="inCard_cvc" oninput="liveUpinfo()"  placeholder=" e.g. 123"><br>
-                  <small  id="wrncvc"></small>
-                </div>
-              </div>
-              <button type="submit" onclick="conFirm()">Confirm</button>
-            </div>
-         </div>
-        </form>
+            <button id="conBtn" type="submit">Register</button>
+        </form> 
+      </div>
     </div>
   </div>
  <script src="script.js"></script>

@@ -63,15 +63,11 @@
     transition: all 1s;
 }
 .col_2{
-    width: 100%;
-    height: auto;
+    width: 1440px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.col_2 .detail .comp{
-    display: none;
-
+   
 }
 .compsub{
     display: flex;
@@ -79,6 +75,9 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    display: none;
+    margin-top: 30px;
+
 }
 #conBtn{
     width: 300px;
@@ -89,21 +88,50 @@
     color: #fff;
     margin: 20px;
 }
-.detail{
-    width: 450px;
+.main_form{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.input-group{
+    display: flex;
     flex-direction: column;
 }
-.main_form{
-    display: block;
+#dop.input-group{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    
 }
-.main_form .cvc{
-     display: flex;
-     justify-content: space-between;
+
+.cvc{
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
 }
-.main_form p{
+.cvc1{
+    max-width: 190px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.cvc1 input{
+    max-width: 50px;
+
+}
+.cvc1 .error{
+    max-width: 50px;
+
+}
+.cvc2{
+    width: 100px;
+}
+.cvc2 input{
+    width: 70px;
+}
+label{
     color: #452356;
     font-size: 12px;
     font-style: normal;
@@ -112,7 +140,7 @@
     margin-bottom: 5px;
     margin-top: 18px;
 }
-.main_form button{
+button{
     width: 300px;
     height: 42px;
     flex-shrink: 0;
@@ -120,20 +148,25 @@
     border-radius: 8px;
     background-color: #220930;
     color: #fff;
-    margin-top: 20px;
+    margin: 20px;
 }
-.main_form input{
+input{
     width: 284px;
     height: 30px;
     padding: 5px;
     outline: 0;
     border-radius: 11px;
-    border: 1px solid  #220930;
+    border: 2px solid #452356;
     background: rgba(217, 217, 217, 0.00);
 }
-.main_form small{
+.date1{
+    display: flex;
+}
+.error{
     color: red;
-
+    font-size: small;
+    margin-top: 5px;
+    
 }
 @keyframes shake {
     0%, 100% {
@@ -146,17 +179,15 @@
         transform: translateX(10px);
     }
 }
-.shake-input {
+
+.input-group.success input{
+    border: 1px solid rgb(10, 212, 10);
+}
+.input-group.error1 input{
+    border: 1px solid rgb(255, 0, 0);
     animation: shake 0.6s;
 }
-.main_form .cvc input{
-    width: 100px;
-    height: 30px;
-}
-.main_form .cvc1 input{
-    width: 60px;
-    height: 30px;
-}
+
 @media (max-width : 1100px) {
     .container{
         width: 100vw;
@@ -220,7 +251,6 @@
     .b_card{
         width: 280px;
         height: 155px;
-
         position: absolute;
         top: 10px;
         left: 70px;
